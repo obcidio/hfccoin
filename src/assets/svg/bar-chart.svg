@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 71.792 82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-7);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9fe5ff"/>
+      <stop offset="0.599" stop-color="#3ac8fd"/>
+      <stop offset="1" stop-color="#00adee"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffeabe"/>
+      <stop offset="0.599" stop-color="#ffce62"/>
+      <stop offset="1" stop-color="#fdc140"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00ace6"/>
+      <stop offset="0.599" stop-color="#124f95"/>
+      <stop offset="1" stop-color="#1d1562"/>
+    </linearGradient>
+  </defs>
+  <g id="bar-chart" transform="translate(-31.867)">
+    <path id="Path_3637" data-name="Path 3637" class="cls-1" d="M31.867,75.121l12.709-7.363L57.246,75.1v29.651l-12.67,7.363-12.709-7.338Z" transform="translate(0 -56.906)"/>
+    <path id="Path_3638" data-name="Path 3638" class="cls-1" d="M31.867,75.121l12.709-7.363L57.246,75.1l-12.67,7.363Z" transform="translate(0 -56.906)"/>
+    <path id="Path_3639" data-name="Path 3639" class="cls-1" d="M44.576,121.069v29.651l-12.709-7.338V113.731Z" transform="translate(0 -95.516)"/>
+    <path id="Path_3640" data-name="Path 3640" class="cls-2" d="M176.767,60.443l12.71-7.363,12.67,7.338v45.4l-12.67,7.363-12.71-7.338Z" transform="translate(-121.693 -44.579)"/>
+    <path id="Path_3641" data-name="Path 3641" class="cls-2" d="M176.767,60.443l12.71-7.363,12.67,7.338-12.67,7.363Z" transform="translate(-121.693 -44.579)"/>
+    <path id="Path_3642" data-name="Path 3642" class="cls-2" d="M189.477,106.391v45.4l-12.71-7.338v-45.4Z" transform="translate(-121.693 -83.189)"/>
+    <path id="Path_3643" data-name="Path 3643" class="cls-3" d="M321.668,7.363,334.377,0l12.67,7.338v67.3L334.377,82l-12.709-7.338Z" transform="translate(-243.388)"/>
+    <path id="Path_3644" data-name="Path 3644" class="cls-3" d="M321.668,7.363,334.377,0l12.67,7.338L334.377,14.7Z" transform="translate(-243.388)"/>
+    <path id="Path_3645" data-name="Path 3645" class="cls-3" d="M334.377,53.312v67.3l-12.709-7.338v-67.3Z" transform="translate(-243.388 -38.611)"/>
+  </g>
+</svg>

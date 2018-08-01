@@ -51,6 +51,16 @@ header {
               height: 40px;
               margin-right: 15px;
               cursor: pointer;
+              border-radius: 50%;
+              &:hover {
+                background-color: #00adee;
+                .cls-1 {
+                  stroke: #00adee;
+                }
+                .cls-2 {
+                  fill: #083153;
+                }
+              }
               .cls-1, .cls-4 {
                 fill: none;
               }
@@ -75,12 +85,14 @@ header {
               height: 40px;
               margin-right: 15px;
               cursor: pointer;
+              border-radius: 50%;
               &:hover {
+                background-color: #00adee;
                 .cls-1 {
-                  fill: #00adee;
+                  fill: #083153;
                 }
-                .cls-3 {
-                  stroke: #0c6db2;
+                .cls-2 {
+                  stroke: #00adee;
                 }
               }
               .cls-1 {
@@ -107,9 +119,71 @@ header {
       .right {
         position: absolute;
         right: 0;
-        top: 90px;
+        top: 95px;
         img {
-          width: 500px;
+          width: 550px;
+        }
+      }
+    }
+  }
+}
+
+//benefits
+.benefits {
+  .container {
+    padding-top: 90px;
+    .title {
+      @include styleTitle;
+    }
+    p {
+      @include styleText;
+      padding-top: 25px;
+      max-width: 712px;
+      text-align: left;
+      padding-bottom: 68px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col-33 {
+        margin-bottom: 68px;
+        &:nth-last-of-type(n+3) {
+          margin-bottom: 0;
+        }
+        &:nth-of-type(3) {
+          img {
+            width: 50px;
+          }
+        }
+        &:nth-of-type(4) {
+          img {
+            width: 55px;
+          }
+        }
+        &:nth-of-type(5) {
+          img {
+            width: 82px;
+          }
+        }
+        &:nth-of-type(6) {
+          img {
+            width: 55px;
+          }
+        }
+        img {
+          width: 70px;
+        }
+        h6 {
+          padding-top: 30px;
+          font-size: 20px;
+          color: $colorTitle;
+        }
+        p {
+          padding-top: 5px;
+          @include styleText;
+          max-width: 320px;
+          width: 100%;
+          text-align: left;
         }
       }
     }

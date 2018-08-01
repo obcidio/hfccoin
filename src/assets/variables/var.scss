@@ -1,3 +1,34 @@
+//variables
 $bgGradient: linear-gradient(to right, #1d1562 0%, #124f95 50%, #00ace6 100%);
 $white: white;
 $hoverColor: #FDC140;
+$colorTitle: #011843;
+$mainColor: #00ADEE;
+$textColor: #182B60;
+// mixine
+@mixin styleTitle {
+  color: $colorTitle;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  text-indent: 55px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    display: block;
+    background-color: $mainColor;
+  }
+}
+
+@mixin styleText {
+  color: $textColor;
+  line-height: 26px;
+  font-family: 'brother_book';
+  font-size: 16px;
+}
