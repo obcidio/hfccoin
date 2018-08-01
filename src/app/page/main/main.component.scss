@@ -1,0 +1,119 @@
+@import "../../../assets/variables/var.scss";
+//haeder
+header {
+  background-image: $bgGradient;
+  .container {
+    padding: 20px 0;
+    nav {
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        li {
+          list-style: none;
+          margin-left: 20px;
+          cursor: pointer;
+          color: $white;
+          font-size: 16px;
+          &:hover {
+            color: $hoverColor;
+          }
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 90px;
+      position: relative;
+      .logo {
+        img {
+          width: 357px;
+        }
+        .slogan {
+          p {
+            padding-top: 13px;
+            font-size: 36px;
+            color: $hoverColor;
+          }
+        }
+        .social {
+          display: flex;
+          margin-top: 85px;
+          .mego,
+          .unknown {
+            svg {
+              display: block;
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+              cursor: pointer;
+              .cls-1, .cls-4 {
+                fill: none;
+              }
+              .cls-1 {
+                stroke: #0c6db2;
+              }
+              .cls-2 {
+                fill: #00adee;
+              }
+              .cls-3 {
+                stroke: none;
+              }
+            }
+          }
+          .telegram,
+          .bitcoin,
+          .fb,
+          .in {
+            svg {
+              display: block;
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+              cursor: pointer;
+              &:hover {
+                .cls-1 {
+                  fill: #00adee;
+                }
+                .cls-3 {
+                  stroke: #0c6db2;
+                }
+              }
+              .cls-1 {
+                fill: #00adee;
+              }
+              .cls-2, .cls-4 {
+                fill: none;
+              }
+              .cls-2 {
+                stroke: #0c6db2;
+              }
+              .cls-3 {
+                stroke: none;
+              }
+            }
+          }
+          .in {
+            svg {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .right {
+        position: absolute;
+        right: 0;
+        top: 90px;
+        img {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+
