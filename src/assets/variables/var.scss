@@ -1,13 +1,14 @@
 //variables
 $bgGradient: linear-gradient(to right, #1d1562 0%, #124f95 50%, #00ace6 100%);
+$itemGradient:linear-gradient(to bottom, rgba(0,172,230,0.9) 0%,rgba(11,117,182,0.9) 13%,rgba(18,79,149,0.9) 22%,rgba(29,21,98,0.9) 100%);
 $white: white;
 $hoverColor: #FDC140;
 $colorTitle: #011843;
 $mainColor: #00ADEE;
 $textColor: #182B60;
 // mixine
-@mixin styleTitle {
-  color: $colorTitle;
+@mixin styleTitle($colorLine,$simpleColor) {
+  color: $simpleColor;
   font-size: 36px;
   position: relative;
   display: inline-block;
@@ -22,12 +23,12 @@ $textColor: #182B60;
     height: 4px;
     border-radius: 2px;
     display: block;
-    background-color: $mainColor;
+    background-color: $colorLine;
   }
 }
 
-@mixin styleText {
-  color: $textColor;
+@mixin styleText($color) {
+  color: $color;
   line-height: 26px;
   font-family: 'brother_book';
   font-size: 16px;
