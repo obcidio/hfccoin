@@ -8,6 +8,8 @@ import {SWIPER_CONFIG, SwiperConfigInterface, SwiperModule} from 'ngx-swiper-wra
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {ScrollToModule} from 'ng2-scroll-to';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -28,6 +30,9 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     HttpClientModule,
     SwiperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ScrollToModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

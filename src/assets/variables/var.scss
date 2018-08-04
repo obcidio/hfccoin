@@ -1,18 +1,23 @@
 //variables
 $bgGradient: linear-gradient(to right, #1d1562 0%, #124f95 50%, #00ace6 100%);
-$itemGradient:linear-gradient(to bottom, rgba(0,172,230,0.9) 0%,rgba(11,117,182,0.9) 13%,rgba(18,79,149,0.9) 22%,rgba(29,21,98,0.9) 100%);
+$bgMobGradient: linear-gradient(to bottom, rgba(0, 172, 230, 1) 0%, rgba(18, 79, 149, 1) 71%, rgba(29, 21, 98, 1) 100%);
+$itemGradient: linear-gradient(to bottom, rgba(0, 172, 230, 0.9) 0%, rgba(11, 117, 182, 0.9) 13%, rgba(18, 79, 149, 0.9) 22%, rgba(29, 21, 98, 0.9) 100%);
 $white: white;
 $hoverColor: #FDC140;
 $colorTitle: #011843;
 $mainColor: #00ADEE;
 $textColor: #182B60;
 // mixine
-@mixin styleTitle($colorLine,$simpleColor) {
+@mixin styleTitle($colorLine, $simpleColor) {
   color: $simpleColor;
   font-size: 36px;
   position: relative;
   display: inline-block;
   text-indent: 55px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    text-indent: 30px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -24,6 +29,9 @@ $textColor: #182B60;
     border-radius: 2px;
     display: block;
     background-color: $colorLine;
+    @media (max-width: 768px) {
+      width: 25px;
+    }
   }
 }
 

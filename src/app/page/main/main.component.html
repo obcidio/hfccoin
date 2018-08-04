@@ -1,16 +1,22 @@
 <header>
   <div class="container">
-    <nav>
+    <div class="mob-btn" [ngClass]="{'color':!isShowNav,'fixed-btn':isFixed}" (click)="showNavFunc()">
+      <span></span>
+      <span></span>
+    </div>
+    <nav [ngClass]="{'show-nav':isShowNav}">
+      <img class="mob-logo" src="../../../assets/images/logo.png" alt="Logo">
       <ul>
-        <li>{{"MAIN_HEADER__NAV_LIST_1" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_2" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_3" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_4" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_5" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_6" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_7" | translate}}</li>
-        <li>{{"MAIN_HEADER__NAV_LIST_8" | translate}}</li>
+        <li (click)="closeMobNav()"><a scrollTo href="#benefits">{{"MAIN_HEADER__NAV_LIST_1" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#moreInfo">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#statistic">{{"MAIN_HEADER__NAV_LIST_3" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#whitepaper">{{"MAIN_HEADER__NAV_LIST_4" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#roadmap">{{"MAIN_HEADER__NAV_LIST_5" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#team">{{"MAIN_HEADER__NAV_LIST_6" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#press">{{"MAIN_HEADER__NAV_LIST_7" | translate}}</a></li>
+        <li (click)="closeMobNav()"><a scrollTo href="#signUp">{{"MAIN_HEADER__NAV_LIST_8" | translate}}</a></li>
       </ul>
+      <div class="empty" (click)="closeMobNav()"></div>
     </nav>
     <div class="content">
       <div class="logo left">
@@ -115,12 +121,106 @@
       </div>
       <div class="right">
         <img src="../../../assets/svg/Group_1422.svg" alt="">
+        <div class="social-mobile">
+          <div class="mego">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2170" data-name="Group 2170" transform="translate(-47 -874.493)">
+                  <g id="Ellipse_25" data-name="Ellipse 25" class="cls-1" transform="translate(47 874.493)">
+                    <circle class="cls-3" cx="20" cy="20" r="20"/>
+                    <circle class="cls-4" cx="20" cy="20" r="19.5"/>
+                  </g>
+                  <path id="Path_129" data-name="Path 129" class="cls-2"
+                        d="M6.663,3.157V16.249a.8.8,0,0,1-.139.473.472.472,0,0,1-.408.2.813.813,0,0,1-.367-.09l-5.192-2.6a.947.947,0,0,1-.4-.373A.974.974,0,0,1,0,13.337V.612A.628.628,0,0,1,.112.233.373.373,0,0,1,.437.076,1.285,1.285,0,0,1,.929.243L6.633,3.1a.12.12,0,0,1,.031.057Zm.714,1.129,5.959,9.665L7.378,10.982ZM20,4.486V16.249a.646.646,0,0,1-.157.451.539.539,0,0,1-.424.173,1.06,1.06,0,0,1-.524-.145l-4.92-2.455Zm-.033-1.339q0,.034-2.863,4.682t-3.353,5.441L9.4,6.194,13.014.312a.683.683,0,0,1,.869-.245l6.039,3.014a.068.068,0,0,1,.045.065Z"
+                        transform="translate(57 886.493)"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="unknown">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2162" data-name="Group 2162" transform="translate(-102 -905)">
+                  <g id="Path_3816" data-name="Path 3816" class="cls-1" transform="translate(102 905)">
+                    <path class="cls-3" d="M20,0A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z"/>
+                    <path class="cls-4"
+                          d="M 20 1 C 17.4345703125 1 14.94642066955566 1.502220153808594 12.60465049743652 2.492698669433594 C 10.34226036071777 3.449611663818359 8.310220718383789 4.819721221923828 6.564968109130859 6.564968109130859 C 4.819721221923828 8.310220718383789 3.449611663818359 10.34226036071777 2.492698669433594 12.60465049743652 C 1.502220153808594 14.94642066955566 1 17.4345703125 1 20 C 1 22.5654296875 1.502220153808594 25.05358123779297 2.492698669433594 27.39535140991211 C 3.449611663818359 29.65773963928223 4.819721221923828 31.68978118896484 6.564968109130859 33.43502807617188 C 8.310220718383789 35.18027877807617 10.34226036071777 36.55038833618164 12.60465049743652 37.50730133056641 C 14.94642066955566 38.49777984619141 17.4345703125 39 20 39 C 22.5654296875 39 25.05358123779297 38.49777984619141 27.39535140991211 37.50730133056641 C 29.65773963928223 36.55038833618164 31.68978118896484 35.18027877807617 33.43502807617188 33.43502807617188 C 35.18027877807617 31.68978118896484 36.55038833618164 29.65773963928223 37.50730133056641 27.39535140991211 C 38.49777984619141 25.05358123779297 39 22.5654296875 39 20 C 39 17.4345703125 38.49777984619141 14.94642066955566 37.50730133056641 12.60465049743652 C 36.55038833618164 10.34226036071777 35.18027877807617 8.310220718383789 33.43502807617188 6.564968109130859 C 31.68978118896484 4.819721221923828 29.65773963928223 3.449611663818359 27.39535140991211 2.492698669433594 C 25.05358123779297 1.502220153808594 22.5654296875 1 20 1 M 20 0 C 31.04570007324219 0 40 8.954299926757812 40 20 C 40 31.04570007324219 31.04570007324219 40 20 40 C 8.954299926757812 40 0 31.04570007324219 0 20 C 0 8.954299926757812 8.954299926757812 0 20 0 Z"/>
+                  </g>
+                  <path id="reddit-big-logo" class="cls-2"
+                        d="M21.14,17.033a2.645,2.645,0,0,0-4.706-1.658,13.793,13.793,0,0,0-4.686-1.154L13.2,9.635l3.241.7a2.241,2.241,0,1,0,.146-1.515l-3.74-.81a.756.756,0,0,0-.88.511l-1.791,5.661a14.087,14.087,0,0,0-5.468,1.192A2.645,2.645,0,0,0,0,17.033,2.628,2.628,0,0,0,.772,18.9a4.609,4.609,0,0,0-.444,1.96,5.806,5.806,0,0,0,3.063,4.776,13.474,13.474,0,0,0,7.178,1.906,13.474,13.474,0,0,0,7.178-1.906,5.806,5.806,0,0,0,3.063-4.776,4.609,4.609,0,0,0-.444-1.96A2.628,2.628,0,0,0,21.14,17.033ZM1.161,17.94a1.716,1.716,0,0,1-.255-.907A1.74,1.74,0,0,1,2.645,15.3a1.717,1.717,0,0,1,1.107.4A7.913,7.913,0,0,0,1.161,17.94Zm3.98,1.531A1.889,1.889,0,1,1,7.031,21.36,1.891,1.891,0,0,1,5.142,19.471Zm9.3,4.311a5.421,5.421,0,0,1-3.875,1.3,5.421,5.421,0,0,1-3.875-1.3.756.756,0,1,1,1.114-1.021,4.155,4.155,0,0,0,2.761.813,4.155,4.155,0,0,0,2.761-.813.756.756,0,0,1,1.114,1.021Zm-.336-2.422A1.889,1.889,0,1,1,16,19.471,1.891,1.891,0,0,1,14.109,21.36Zm5.869-3.421a7.913,7.913,0,0,0-2.59-2.247,1.717,1.717,0,0,1,1.107-.4,1.74,1.74,0,0,1,1.738,1.738A1.716,1.716,0,0,1,19.978,17.94Z"
+                        transform="translate(111 907.458)"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="bitcoin">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2163" data-name="Group 2163" transform="translate(-157 -905)">
+                  <path id="symbol" class="cls-1"
+                        d="M16.82,9.019C17.166,6.707,15.406,5.464,13,4.635L13.78,1.5l-1.906-.475-.76,3.049c-.5-.125-1.016-.243-1.527-.359L10.352.649,8.447.174,7.666,3.3c-.415-.094-.822-.188-1.217-.286l0-.01L3.822,2.352,3.315,4.388s1.414.324,1.384.344a1.014,1.014,0,0,1,.888,1.109L4.7,9.408a1.579,1.579,0,0,1,.2.064l-.2-.05-1.247,5a.694.694,0,0,1-.874.453c.019.028-1.385-.346-1.385-.346L.243,16.708l2.481.618c.461.116.914.237,1.359.351l-.789,3.167,1.9.475.781-3.134c.52.141,1.025.271,1.519.394L6.72,21.7l1.906.475.789-3.161c3.25.615,5.694.367,6.723-2.573.829-2.367-.041-3.732-1.751-4.623a3.04,3.04,0,0,0,2.434-2.8Zm-4.355,6.107c-.589,2.367-4.574,1.087-5.867.767l1.047-4.2C8.937,12.019,13.081,12.657,12.465,15.126Zm.59-6.141c-.537,2.153-3.855,1.059-4.931.791L9.073,5.97C10.149,6.238,13.614,6.738,13.055,8.984Z"
+                        transform="translate(167.757 913.826)"/>
+                  <g id="Path_3817" data-name="Path 3817" class="cls-2" transform="translate(157 905)">
+                    <path class="cls-3" d="M20,0A20,20,0,1,1,0,20,20,20,0,0,1,20,0Z"/>
+                    <path class="cls-4"
+                          d="M 20 1 C 17.4345703125 1 14.94642066955566 1.502220153808594 12.60465049743652 2.492698669433594 C 10.34226036071777 3.449611663818359 8.310220718383789 4.819721221923828 6.564968109130859 6.564968109130859 C 4.819721221923828 8.310220718383789 3.449611663818359 10.34226036071777 2.492698669433594 12.60465049743652 C 1.502220153808594 14.94642066955566 1 17.4345703125 1 20 C 1 22.5654296875 1.502220153808594 25.05358123779297 2.492698669433594 27.39535140991211 C 3.449611663818359 29.65773963928223 4.819721221923828 31.68978118896484 6.564968109130859 33.43502807617188 C 8.310220718383789 35.18027877807617 10.34226036071777 36.55038833618164 12.60465049743652 37.50730133056641 C 14.94642066955566 38.49777984619141 17.4345703125 39 20 39 C 22.5654296875 39 25.05358123779297 38.49777984619141 27.39535140991211 37.50730133056641 C 29.65773963928223 36.55038833618164 31.68978118896484 35.18027877807617 33.43502807617188 33.43502807617188 C 35.18027877807617 31.68978118896484 36.55038833618164 29.65773963928223 37.50730133056641 27.39535140991211 C 38.49777984619141 25.05358123779297 39 22.5654296875 39 20 C 39 17.4345703125 38.49777984619141 14.94642066955566 37.50730133056641 12.60465049743652 C 36.55038833618164 10.34226036071777 35.18027877807617 8.310220718383789 33.43502807617188 6.564968109130859 C 31.68978118896484 4.819721221923828 29.65773963928223 3.449611663818359 27.39535140991211 2.492698669433594 C 25.05358123779297 1.502220153808594 22.5654296875 1 20 1 M 20 0 C 31.04570007324219 0 40 8.954299926757812 40 20 C 40 31.04570007324219 31.04570007324219 40 20 40 C 8.954299926757812 40 0 31.04570007324219 0 20 C 0 8.954299926757812 8.954299926757812 0 20 0 Z"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="telegram">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2164" data-name="Group 2164" transform="translate(-212 -905)">
+                  <path id="Path_3813" data-name="Path 3813" class="cls-1"
+                        d="M18.581.093.462,7.153A.66.66,0,0,0,.514,8.4l4.608,1.36,1.717,5.455a.784.784,0,0,0,1.315.312l2.378-2.43L15.2,16.524a.978.978,0,0,0,1.531-.587L19.822,1.148A.925.925,0,0,0,18.581.093ZM16.306,3.37,7.894,10.817a.477.477,0,0,0-.149.29L7.418,13.99a.088.088,0,0,1-.171.015L5.91,9.7a.455.455,0,0,1,.193-.52l9.936-6.161a.221.221,0,0,1,.268.349Zm0,0"
+                        transform="translate(221.958 916.972)"/>
+                  <g id="Ellipse_212" data-name="Ellipse 212" class="cls-2" transform="translate(212 905)">
+                    <circle class="cls-3" cx="20" cy="20" r="20"/>
+                    <circle class="cls-4" cx="20" cy="20" r="19.5"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="fb">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2165" data-name="Group 2165" transform="translate(-267 -905)">
+                  <path id="Path_3814" data-name="Path 3814" class="cls-1"
+                        d="M60.3,15.923h2.1v-1.98a4.686,4.686,0,0,1,.7-3.029A3.612,3.612,0,0,1,66.241,9.4a14.505,14.505,0,0,1,3.727.349L69.5,12.778a6.813,6.813,0,0,0-1.631-.233c-.815,0-1.514.233-1.514,1.048v2.33h3.261l-.349,2.912H66.241v10.25H62.4V18.835H60.3V15.923Z"
+                        transform="translate(221.7 905.6)"/>
+                  <g id="Ellipse_213" data-name="Ellipse 213" class="cls-2" transform="translate(267 905)">
+                    <circle class="cls-3" cx="20" cy="20" r="20"/>
+                    <circle class="cls-4" cx="20" cy="20" r="19.5"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="in">
+            <a href="#" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                <g id="Group_2166" data-name="Group 2166" transform="translate(-322 -905)">
+                  <path id="Path_3815" data-name="Path 3815" class="cls-1"
+                        d="M213.51,27.455h-3.844V15.108h3.844Zm-1.98-13.861h0a2.108,2.108,0,1,1,2.33-2.1A2.151,2.151,0,0,1,211.53,13.593ZM229,27.455h-4.426V21.048c0-1.631-.7-2.8-2.213-2.8a2.322,2.322,0,0,0-2.1,1.514,2.585,2.585,0,0,0-.117,1.048v6.639h-4.31V15.108h4.31v1.98a3.98,3.98,0,0,1,3.844-2.1c2.8,0,4.892,1.747,4.892,5.591v6.872Z"
+                        transform="translate(122.8 906.6)"/>
+                  <g id="Ellipse_214" data-name="Ellipse 214" class="cls-2" transform="translate(322 905)">
+                    <circle class="cls-3" cx="20" cy="20" r="20"/>
+                    <circle class="cls-4" cx="20" cy="20" r="19.5"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </header>
 <!--benefits-->
-<section class="benefits">
+<section id="benefits" class="benefits">
   <div class="container">
     <h2 class="title">{{"MAIN_BENEFITS__TITLE" | translate}}</h2>
     <p>{{"MAIN_BENEFITS__DESCRIPTION" | translate}}</p>
@@ -230,7 +330,7 @@
   </div>
 </section>
 <!--statistic-->
-<section class="statistic">
+<section id="statistic" class="statistic">
   <div class="container">
     <h2 class="title">{{"MAIN_STATISTIC__TITLE"| translate}}</h2>
     <p>{{"MAIN_STATISTIC__SUBTITLE"| translate}}</p>
@@ -253,12 +353,13 @@
       </div>
       <div class="wrapper-right">
         <img src="../../../assets/svg/Group_2077.svg" alt="">
+        <img class="mobile-chart" src="../../../assets/svg/Group_2169.svg" alt="">
       </div>
     </div>
   </div>
 </section>
 <!--whitepaper-->
-<section class="whitepaper">
+<section id="whitepaper" class="whitepaper">
   <div class="container">
     <h2 class="title">{{"MAIN_WHITEPAPER__TITLE" | translate}}</h2>
     <div class="wrapper">
@@ -271,8 +372,7 @@
   </div>
 </section>
 <!--roadmap-->
-
-<section class="roadmap">
+<section id="roadmap" class="roadmap">
   <div class="container">
     <h2 class="title">{{"MAIN_ROADMAP__TITLE"| translate}}</h2>
     <div class="time-line">
@@ -322,7 +422,7 @@
   </div>
 </section>
 <!--team-->
-<section class="team">
+<section id="team" class="team">
   <div class="container">
     <h2 class="title">Team</h2>
     <div class="row remove-margin">
@@ -341,6 +441,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -357,37 +462,10 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
+        <div class="story-mobile">
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
             maiores
             necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
         </div>
       </div>
       <div class="col-25">
@@ -405,6 +483,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -421,6 +504,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -437,6 +525,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -452,6 +545,53 @@
           <a href="#" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
+        </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="user">
+          <div class="bg"></div>
+          <img src="../../../assets/images/1.png" alt="">
+        </div>
+        <h6 class="name">Stanislav Sheliakin</h6>
+        <p class="position">Head of Blockchain Strategy & Design</p>
+        <div class="story">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="user">
+          <div class="bg"></div>
+          <img src="../../../assets/images/1.png" alt="">
+        </div>
+        <h6 class="name">Stanislav Sheliakin</h6>
+        <p class="position">Head of Blockchain Strategy & Design</p>
+        <div class="story">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
         </div>
       </div>
     </div>
@@ -472,6 +612,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -488,6 +633,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -504,6 +654,11 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+        </div>
       </div>
       <div class="col-25">
         <div class="user">
@@ -519,13 +674,18 @@
           <a href="#" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
+        </div>
+        <div class="story-mobile">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
+            maiores
+            necessitatibus nesciunt officia sit tempore. Laborum!</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!--press-->
-<section class="press">
+<section id="press" class="press">
   <div class="container">
     <h2 class="title">Press</h2>
     <div class="row">
@@ -556,12 +716,12 @@
     </div>
     <div class="btn">
       <button type="button">DOWNLOAD PRESS PACKET</button>
-      <a href="#">Request an Interview</a>
+      <a (click)="showModal()">Request an Interview</a>
     </div>
   </div>
 </section>
 <!--more infoo-->
-<section class="moreInfo">
+<section id="moreInfo" class="moreInfo">
   <div class="container">
     <h2 class="title">Want more info?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo eget tortor lacinia mattis. Nullam sit
@@ -576,7 +736,7 @@
   </div>
 </section>
 <!--footer-->
-<footer>
+<footer id="signUp">
   <div class="container">
     <span>© 2018 HFC Coin. All Rights Reserved.</span>
     <div class="social">
@@ -664,4 +824,140 @@
       <a href="#" target="_blank"> Privacy Policy</a>
     </div>
   </div>
+  <div class="mob-footer">
+    <div class="social">
+      <a class="mego" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2171" data-name="Group 2171" transform="translate(-47.002 -929.438)">
+            <g id="Ellipse_25" data-name="Ellipse 25" class="cls-1" transform="translate(47.002 929.438)">
+              <ellipse class="cls-3" cx="17.78" cy="17.78" rx="17.78" ry="17.78"/>
+              <ellipse class="cls-4" cx="17.78" cy="17.78" rx="17.28" ry="17.28"/>
+            </g>
+            <path id="Path_129" data-name="Path 129" class="cls-2"
+                  d="M5.924,2.807V14.446a.708.708,0,0,1-.123.421.42.42,0,0,1-.363.174.723.723,0,0,1-.327-.08L.5,12.649a.841.841,0,0,1-.352-.332A.866.866,0,0,1,0,11.857V.544A.559.559,0,0,1,.1.207.331.331,0,0,1,.388.067,1.142,1.142,0,0,1,.826.216L5.9,2.756a.107.107,0,0,1,.027.051Zm.635,1,5.3,8.593-5.3-2.64Zm11.222.178V14.446a.574.574,0,0,1-.14.4.479.479,0,0,1-.377.154.942.942,0,0,1-.466-.129l-4.374-2.183ZM17.751,2.8q0,.03-2.545,4.162T12.225,11.8l-3.87-6.29L11.57.278A.607.607,0,0,1,12.343.06l5.369,2.68a.06.06,0,0,1,.04.058Z"
+                  transform="translate(55.892 940.106)"/>
+          </g>
+        </svg>
+      </a>
+      <a class="bitkoin" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2173" data-name="Group 2173" transform="translate(-144.794 -929)">
+            <path id="symbol" class="cls-1"
+                  d="M14.98,8.037c.307-2.055-1.257-3.16-3.4-3.9l.694-2.784L10.583.934,9.907,3.645c-.445-.111-.9-.216-1.358-.32L9.23.6,7.537.174,6.842,2.957C6.473,2.873,6.111,2.79,5.76,2.7l0-.009L3.425,2.111l-.451,1.81s1.257.288,1.231.306a.9.9,0,0,1,.79.986L4.2,8.384a1.4,1.4,0,0,1,.176.056L4.2,8.4,3.093,12.838a.617.617,0,0,1-.777.4c.017.025-1.232-.307-1.232-.307l-.841,1.94,2.205.55c.41.1.812.21,1.208.312l-.7,2.816,1.693.422.695-2.786c.462.125.911.241,1.35.35L6,19.31l1.695.422.7-2.81c2.89.547,5.062.326,5.977-2.287a2.973,2.973,0,0,0-1.557-4.11A2.7,2.7,0,0,0,14.98,8.037Zm-3.872,5.429c-.524,2.1-4.067.967-5.215.681l.931-3.73C7.972,10.7,11.656,11.272,11.109,13.466Zm.524-5.46c-.478,1.914-3.427.942-4.383.7l.844-3.383C9.05,5.565,12.13,6.01,11.633,8.007Z"
+                  transform="translate(154.329 936.827)"/>
+            <g id="Ellipse_92" data-name="Ellipse 92" class="cls-2" transform="translate(144.794 929)">
+              <circle class="cls-3" cx="17.78" cy="17.78" r="17.78"/>
+              <circle class="cls-4" cx="17.78" cy="17.78" r="17.28"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a class="unknown" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2172" data-name="Group 2172" transform="translate(-95.897 -929)">
+            <g id="Ellipse_91" data-name="Ellipse 91" class="cls-1" transform="translate(95.897 929)">
+              <circle class="cls-3" cx="17.78" cy="17.78" r="17.78"/>
+              <circle class="cls-4" cx="17.78" cy="17.78" r="17.28"/>
+            </g>
+            <path id="reddit-big-logo" class="cls-2"
+                  d="M18.794,15.98a2.352,2.352,0,0,0-4.184-1.474,12.262,12.262,0,0,0-4.166-1.026L11.734,9.4l2.882.624a1.992,1.992,0,1,0,.13-1.347L11.42,7.96a.672.672,0,0,0-.783.454L9.045,13.446a12.524,12.524,0,0,0-4.861,1.06A2.352,2.352,0,0,0,0,15.98a2.336,2.336,0,0,0,.687,1.66,4.1,4.1,0,0,0-.395,1.742,5.162,5.162,0,0,0,2.723,4.246A11.979,11.979,0,0,0,9.4,25.322a11.978,11.978,0,0,0,6.381-1.694A5.162,5.162,0,0,0,18.5,19.382a4.1,4.1,0,0,0-.395-1.742A2.337,2.337,0,0,0,18.794,15.98Zm-17.761.806a1.525,1.525,0,0,1-.226-.806,1.547,1.547,0,0,1,1.545-1.545,1.527,1.527,0,0,1,.984.353A7.035,7.035,0,0,0,1.032,16.786Zm3.538,1.361a1.68,1.68,0,1,1,1.68,1.68A1.681,1.681,0,0,1,4.571,18.147Zm8.271,3.833A4.819,4.819,0,0,1,9.4,23.139,4.819,4.819,0,0,1,5.952,21.98a.672.672,0,1,1,.991-.908A3.694,3.694,0,0,0,9.4,21.8a3.694,3.694,0,0,0,2.455-.723.672.672,0,0,1,.991.908Zm-.3-2.153a1.68,1.68,0,1,1,1.68-1.68A1.681,1.681,0,0,1,12.543,19.827Zm5.218-3.041a7.034,7.034,0,0,0-2.3-2,1.526,1.526,0,0,1,.984-.353,1.547,1.547,0,0,1,1.545,1.545A1.525,1.525,0,0,1,17.761,16.786Z"
+                  transform="translate(103.898 930.348)"/>
+          </g>
+        </svg>
+      </a>
+      <a class="telegram" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2174" data-name="Group 2174" transform="translate(-193.689 -929)">
+            <path id="Path_128" data-name="Path 128" class="cls-1"
+                  d="M16.523.086.415,6.362a.587.587,0,0,0,.046,1.11l4.1,1.209,1.526,4.849a.7.7,0,0,0,1.169.277l2.114-2.16,4.149,3.046a.87.87,0,0,0,1.361-.522L17.626,1.024a.823.823,0,0,0-1.1-.938ZM14.5,3,7.022,9.62a.424.424,0,0,0-.132.258L6.6,12.441a.078.078,0,0,1-.152.013L5.258,8.629a.4.4,0,0,1,.172-.462l8.833-5.477A.2.2,0,0,1,14.5,3Zm0,0"
+                  transform="translate(202.537 939.64)"/>
+            <g id="Ellipse_94" data-name="Ellipse 94" class="cls-2" transform="translate(193.689 929)">
+              <circle class="cls-3" cx="17.78" cy="17.78" r="17.78"/>
+              <circle class="cls-4" cx="17.78" cy="17.78" r="17.28"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a class="fb" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2175" data-name="Group 2175" transform="translate(-242.585 -929)">
+            <path id="Path_117" data-name="Path 117" class="cls-1"
+                  d="M60.3,15.2h1.864v-1.76a4.166,4.166,0,0,1,.621-2.692,3.211,3.211,0,0,1,2.8-1.346,12.9,12.9,0,0,1,3.314.311L68.481,12.4a6.057,6.057,0,0,0-1.45-.207c-.725,0-1.346.207-1.346.932V15.2h2.9l-.311,2.589H65.581V26.9H62.164V17.788H60.3V15.2Z"
+                  transform="translate(195.62 928.49)"/>
+            <g id="Ellipse_95" data-name="Ellipse 95" class="cls-2" transform="translate(242.585 929)">
+              <circle class="cls-3" cx="17.78" cy="17.78" r="17.78"/>
+              <circle class="cls-4" cx="17.78" cy="17.78" r="17.28"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a class="in" href="#" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.561 35.561">
+          <g id="Group_2176" data-name="Group 2176" transform="translate(-291.48 -929)">
+            <path id="Path_123" data-name="Path 123" class="cls-1"
+                  d="M213.031,25.451h-3.417V14.474h3.417Zm-1.76-12.323h0a1.874,1.874,0,1,1,2.071-1.864A1.912,1.912,0,0,1,211.271,13.128ZM226.8,25.451h-3.935v-5.7c0-1.45-.621-2.485-1.967-2.485a2.064,2.064,0,0,0-1.864,1.346,2.3,2.3,0,0,0-.1.932v5.9H215.1V14.474h3.831v1.76a3.538,3.538,0,0,1,3.417-1.864c2.485,0,4.349,1.553,4.349,4.971v6.11Z"
+                  transform="translate(91.171 929.379)"/>
+            <g id="Ellipse_96" data-name="Ellipse 96" class="cls-2" transform="translate(291.48 929)">
+              <circle class="cls-3" cx="17.78" cy="17.78" r="17.78"/>
+              <circle class="cls-4" cx="17.78" cy="17.78" r="17.28"/>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <div class="privat">
+      <a href="#" target="_blank">Terms and Conditions</a> |
+      <a href="#" target="_blank"> Privacy Policy</a>
+    </div>
+    <span>© 2018 HFC Coin. All Rights Reserved.</span>
+  </div>
 </footer>
+<!--modal-->
+<div class="popup-container" [ngClass]="{'show':isShow}">
+  <div class="popup-wrp">
+    <div class="close" (click)="closeModal()">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="title">Request an Interview</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo eget tortor lacinia mattis.</p>
+    <form [formGroup]="form">
+      <div class="flex-column">
+        <input type="text" placeholder="Name" formControlName="name">
+        <div class="error">
+              <span class="help-text" *ngIf="form.controls.name.invalid && form.controls.name.touched">
+                <span *ngIf="form.controls.name.errors.required">This field can't be empty.</span>
+                <span *ngIf=" form.controls.name.errors.pattern">
+                  Name should only include latin letters
+                </span>
+              </span>
+        </div>
+
+      </div>
+      <div class="flex-column">
+        <input type="text" placeholder="Name of Publication or Broadcast">
+      </div>
+      <div class="flex-column">
+        <input type="url" placeholder="Website">
+      </div>
+      <div class="form-row">
+        <input type="email" placeholder="Email Address" formControlName="email">
+        <input type="tel" placeholder="Phone Number">
+        <div class="error">
+              <span class=" help-text" *ngIf="form.controls.email.invalid && form.controls.email.touched">
+
+                <span *ngIf="form.controls.email.errors.required">
+                  This field can't be empty.
+                </span>
+
+                <span *ngIf="!form.controls.email.errors.required && form.controls.email.errors.emailFormat">
+                  The entered email address is invalid.
+                </span>
+              </span>
+        </div>
+      </div>
+      <textarea placeholder="Reason for Interview"></textarea>
+      <button type="submit">send</button>
+    </form>
+  </div>
+</div>
