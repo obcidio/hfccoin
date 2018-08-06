@@ -1,0 +1,79 @@
+//press
+.press {
+  background-color: #E2EFFF;
+  padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 45px 0;
+  }
+  .container {
+    @media (max-width: 768px) {
+      padding: 0px 25px;
+    }
+    .title {
+      @include styleTitle($mainColor, $colorTitle);
+      margin-bottom: 70px;
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
+      }
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        width: 100%;
+      }
+      .col-25 {
+        max-width: 278px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #263137;
+        min-height: 188px;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+          max-width: none;
+        }
+      }
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        height: 50px;
+        border-radius: 60px;
+        border: 2px solid $mainColor;
+        color: $mainColor;
+        text-transform: uppercase;
+        font-size: 18px;
+        max-width: 300px;
+        width: 100%;
+        background-color: transparent;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        &:hover {
+          background-color: $mainColor;
+          color: $white;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      a {
+        color: $mainColor;
+        font-size: 18px;
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

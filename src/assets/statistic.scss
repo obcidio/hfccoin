@@ -1,0 +1,100 @@
+.statistic {
+  padding: 100px 0;
+  @media (max-width: 1024px) {
+    padding: 45px 0;
+  }
+  .container {
+    @media (max-width: 1024px) {
+      padding: 0 25px;
+    }
+    .title {
+      @include styleTitle($mainColor, $colorTitle);
+      @media (max-width: 369px) {
+        max-width: 200px;
+        margin-left: 28px;
+        text-indent: 0;
+        &:before {
+          top: 18px;
+          left: -30px;
+        }
+      }
+    }
+    p {
+      @include styleText($textColor);
+      padding-top: 25px;
+      max-width: 712px;
+      text-align: left;
+      padding-bottom: 68px;
+      @media (max-width: 1024px) {
+        padding-bottom: 30px;
+      }
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+      .wrapper-left {
+        ul {
+          li {
+            list-style: none;
+            margin-bottom: 40px;
+            @media (max-width: 1024px) {
+              margin-bottom: 30px;
+            }
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+            h4 {
+              font-size: 30px;
+              color: $colorTitle;
+              @media (max-width: 1024px) {
+                font-size: 25px;
+              }
+            }
+            p {
+              padding: 0;
+              @include styleText($textColor);
+              max-width: 300px;
+              width: 100%;
+              font-size: 20px;
+              text-align: left;
+              @media (max-width: 768px) {
+                max-width: none;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .wrapper-right {
+        width: calc(100% - 400px);
+        @media (max-width: 1024px) {
+          width: 100%;
+          margin-top: 30px;
+        }
+        img {
+          width: 110%;
+          @media (max-width: 768px) {
+            display: none;
+          }
+          @media screen and (min-width: 769px) and (max-width: 1024px) {
+            width: 100%;
+          }
+          @media screen and (min-width: 1025px) and (max-width: 1200px) {
+            width: 90%;
+          }
+        }
+        .mobile-chart {
+          display: none;
+          @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}

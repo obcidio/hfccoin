@@ -1,0 +1,105 @@
+// market
+.market {
+  width: 100%;
+  background-size: contain;
+  background-repeat: repeat-y;
+  @media (max-width: 1024px) {
+    background-image: $bgMobGradient !important;
+  }
+  .container {
+    display: flex;
+    @media (max-width: 1024px) {
+      padding: 0 25px;
+    }
+    .market-left {
+      width: 60%;
+      padding-top: 100px;
+      padding-bottom: 30px;
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding-top: 45px;
+        padding-bottom: 0;
+      }
+      .title {
+        @include styleTitle($hoverColor, $mainColor);
+        @media (max-width: 369px) {
+          max-width: 200px;
+          margin-left: 28px;
+          text-indent: 0;
+          &:before {
+            top: 18px;
+            left: -30px;
+          }
+        }
+        @media (max-width: 1024px) {
+          color: white;
+        }
+      }
+      p {
+        padding-top: 30px;
+        max-width: 700px;
+        width: 100%;
+        text-align: left;
+        @include styleText(white);
+      }
+      .row {
+        padding-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 1024px) {
+          padding-top: 30px;
+        }
+        .col-50 {
+          padding-bottom: 70px;
+          @media (max-width: 1024px) {
+            padding-bottom: 30px;
+          }
+          h6 {
+            color: $white;
+            font-size: 20px;
+            @media (max-width: 768px) {
+              position: relative;
+              text-indent: 25px;
+              font-size: 20px;
+              &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -3px;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 2px;
+                border-radius: 2px;
+                display: block;
+                background-color: $hoverColor;
+              }
+            }
+          }
+          p {
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+    .market-right {
+      width: 40%;
+      padding-top: 100px;
+      padding-bottom: 30px;
+      position: relative;
+      @media (max-width: 1024px) {
+        display: none;
+      }
+      img {
+        width: 390px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -30%;
+        @media screen and (min-width: 1025px) and (max-width: 1300px) {
+          right: -5%;
+          width: 30vw;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+//crisis
+.crisis {
+  background-color: #E2EFFF;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  @media (max-width: 768px) {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+  .container {
+    @media (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .title {
+      @include styleTitle($mainColor, $colorTitle);
+      @media (max-width: 369px) {
+        max-width: 200px;
+        margin-left: 28px;
+        text-indent: 0;
+        &:before {
+          top: 18px;
+          left: -30px;
+        }
+      }
+    }
+    p {
+      @include styleText($textColor);
+      padding-top: 25px;
+      max-width: 712px;
+      text-align: left;
+      padding-bottom: 68px;
+      @media (max-width: 768px) {
+        padding-bottom: 30px;
+        max-width: none;
+      }
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col-33 {
+        margin-bottom: 68px;
+        @media (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+        h6 {
+          padding-top: 30px;
+          font-size: 20px;
+          color: $colorTitle;
+          @media (max-width: 768px) {
+            position: relative;
+            text-indent: 25px;
+            padding-top: 0;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -3px;
+              transform: translateY(-50%);
+              width: 20px;
+              height: 2px;
+              border-radius: 2px;
+              display: block;
+              background-color: $mainColor;
+            }
+          }
+        }
+        p {
+          padding-top: 5px;
+          @include styleText($textColor);
+          max-width: 320px;
+          width: 100%;
+          text-align: left;
+          padding-bottom: 0;
+          @media (max-width: 768px) {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}

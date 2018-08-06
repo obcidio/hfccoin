@@ -1,0 +1,125 @@
+.moreInfo {
+  padding: 100px 0;
+  @media (max-width: 768px) {
+    padding: 45px 0;
+  }
+  .container {
+    @media (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .title {
+      @include styleTitle($mainColor, $textColor)
+    }
+    p {
+      @include styleText($textColor);
+      padding-top: 25px;
+      max-width: 712px;
+      text-align: left;
+      padding-bottom: 50px;
+    }
+    .bottom-container {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+      }
+      button[type='button'] {
+        height: 50px;
+        border-radius: 60px;
+        border: 2px solid $mainColor;
+        color: $mainColor;
+        text-transform: uppercase;
+        font-size: 18px;
+        max-width: 300px;
+        width: 100%;
+        background-color: transparent;
+        cursor: pointer;
+        @media (max-width: 768px) {
+          max-width: none;
+        }
+        &:hover {
+          background-color: $mainColor;
+          color: $white;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    form {
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      @media (max-width: 768px) {
+        max-width: none;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        &:after {
+          content: '';
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: block;
+          width: 30%;
+          height: 2px;
+          border-radius: 3px;
+          background-color: #C5CAD7;
+        }
+      }
+      input {
+        font-family: "brother_book";
+        font-size: 16px;
+        height: 50px;
+        border-radius: 60px;
+        border: 2px solid #C5CAD7;
+        color: #011843;
+        padding-left: 15px;
+        padding-right: 100px;
+        max-width: 356px;
+        width: 100%;
+        @media (max-width: 768px) {
+          max-width: none;
+          padding-right: 0;
+          text-align: center;
+        }
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-size: 16px;
+          color: #8B95AF;
+          ;
+        }
+      }
+      button[type='submit'] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 50px;
+        border-radius: 60px;
+        color: $white;
+        background-color: $mainColor;
+        text-transform: uppercase;
+        font-size: 18px;
+        max-width: 240px;
+        width: 100%;
+        cursor: pointer;
+        border: 0;
+        @media (max-width: 768px) {
+          position: static;
+          max-width: none;
+          margin-top: 10px;
+        }
+        &:hover {
+          background-color: #0F60A4;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

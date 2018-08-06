@@ -1,11 +1,14 @@
-<header>
+<header id="top">
   <div class="container">
     <div class="mob-btn" [ngClass]="{'color':!isShowNav,'fixed-btn':isFixed}" (click)="showNavFunc()">
       <span></span>
       <span></span>
     </div>
-    <nav [ngClass]="{'show-nav':isShowNav}">
+    <nav id="nav-inner" [ngClass]="{'show-nav':isShowNav}">
       <img class="mob-logo" src="../../../assets/images/logo.png" alt="Logo">
+      <a  href="#top">
+        <img class="desctop-logo" src="../../../assets/images/logo2.png" alt="Logo">
+      </a>
       <ul>
         <li (click)="closeMobNav()"><a scrollTo href="#benefits">{{"MAIN_HEADER__NAV_LIST_1" | translate}}</a></li>
         <li (click)="closeMobNav()"><a scrollTo href="#moreInfo">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
@@ -16,7 +19,7 @@
         <li (click)="closeMobNav()"><a scrollTo href="#press">{{"MAIN_HEADER__NAV_LIST_7" | translate}}</a></li>
         <li (click)="closeMobNav()"><a scrollTo href="#signUp">{{"MAIN_HEADER__NAV_LIST_8" | translate}}</a></li>
       </ul>
-      <div class="empty" (click)="closeMobNav()"></div>
+      <!--<div class="empty" (click)="closeMobNav()"></div>-->
     </nav>
     <div class="content">
       <div class="logo left">
@@ -376,8 +379,40 @@
   <div class="container">
     <h2 class="title">{{"MAIN_ROADMAP__TITLE"| translate}}</h2>
     <div class="time-line">
-      <div class="swiper-container">
+      <div class="swiper-container" [swiper]="config" [(index)]="index">
         <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-top">
+              <div class="slide-top-item done-top">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_1_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_1_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+              <div class="slide-top-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_2_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_2_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+              <div class="slide-top-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_3_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_3_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="slide-bottom">
+              <div class="slide-bottom-item done-bottom">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_1_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_1_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+              <div class="slide-bottom-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_2_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_2_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+            </div>
+          </div>
           <div class="swiper-slide">
             <div class="slide-top">
               <div class="slide-top-item done-top">
@@ -728,9 +763,18 @@
       amet mi eu lacus scelerisque vulputate interdum ut est.</p>
     <div class="bottom-container">
       <button type="button">APPLY TO WHITELIST</button>
-      <form action="">
-        <input type="email" placeholder="Enter Email">
-        <button type="submit">GET UPDATES</button>
+      <!--<form action="">-->
+        <!--<input type="email" placeholder="Enter Email">-->
+        <!--<button type="submit">GET UPDATES</button>-->
+      <!--</form>-->
+      <form action="https://hfccoin.us18.list-manage.com/subscribe/post?u=2c588183070244245b2583004&amp;id=30f29911fb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter Email" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2c588183070244245b2583004_30f29911fb" tabindex="-1" value=""></div>
+          <div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">GET UPDATES</button></div>
+        </div>
       </form>
     </div>
   </div>
@@ -913,51 +957,85 @@
   </div>
 </footer>
 <!--modal-->
-<div class="popup-container" [ngClass]="{'show':isShow}">
-  <div class="popup-wrp">
-    <div class="close" (click)="closeModal()">
+<div class="popup__container" [ngClass]="{'show':isShow}">
+  <div class="popup__wrp">
+    <button class="close" (click)="closeModal()">
       <span></span>
       <span></span>
-    </div>
-    <div class="title">Request an Interview</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo eget tortor lacinia mattis.</p>
-    <form [formGroup]="form">
-      <div class="flex-column">
-        <input type="text" placeholder="Name" formControlName="name">
-        <div class="error">
-              <span class="help-text" *ngIf="form.controls.name.invalid && form.controls.name.touched">
-                <span *ngIf="form.controls.name.errors.required">This field can't be empty.</span>
-                <span *ngIf=" form.controls.name.errors.pattern">
-                  Name should only include latin letters
-                </span>
-              </span>
+    </button>
+    <div class="popup__title">Request an Interview</div>
+    <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo eget tortor lacinia mattis.</p>
+    <form
+      [formGroup]="form"
+      action="https://hfccoin.us18.list-manage.com/subscribe/post?u=2c588183070244245b2583004&amp;id=0142243d65"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate popup-form"
+      target="_blank"
+      novalidate>
+        <div class="flex-column">
+          <input type="email" value="" placeholder="Email" name="EMAIL" class="popup-form__input" id="mce-EMAIL2">
         </div>
-
-      </div>
-      <div class="flex-column">
-        <input type="text" placeholder="Name of Publication or Broadcast">
-      </div>
-      <div class="flex-column">
-        <input type="url" placeholder="Website">
-      </div>
-      <div class="form-row">
-        <input type="email" placeholder="Email Address" formControlName="email">
-        <input type="tel" placeholder="Phone Number">
-        <div class="error">
-              <span class=" help-text" *ngIf="form.controls.email.invalid && form.controls.email.touched">
-
-                <span *ngIf="form.controls.email.errors.required">
-                  This field can't be empty.
-                </span>
-
-                <span *ngIf="!form.controls.email.errors.required && form.controls.email.errors.emailFormat">
-                  The entered email address is invalid.
-                </span>
-              </span>
+        <div class="flex-column">
+          <input type="text" value="" placeholder="Name" name="FNAME" class="popup-form__input" id="mce-FNAME">
         </div>
-      </div>
-      <textarea placeholder="Reason for Interview"></textarea>
-      <button type="submit">send</button>
+        <div class="flex-column">
+          <input type="text" value="" placeholder="Name of Publication or Broadcast" name="Last Name" class="popup-form__input" id="mce-LNAME">
+        </div>
+        <div class="flex-column">
+          <input type="text" value="" placeholder="Website" name="MMERGE5" class="popup-form__input" id="mce-MMERGE5">
+        </div>
+        <div class="flex-column">
+          <input type="number" name="MMERGE3" placeholder="Phone Number" class="popup-form__input" value="" id="mce-MMERGE3">
+        </div>
+        <div class="flex-column">
+          <input type="text" value="" placeholder="Reson for Interview" name="MMERGE4" class=" popup-form__input" id="mce-MMERGE4">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2c588183070244245b2583004_0142243d65" tabindex="-1" value=""></div>
+        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribes2" class="popup-form__btn">send</button>
     </form>
+    <!--<form class="popup-form" [formGroup]="form">-->
+      <!--<div class="flex-column">-->
+        <!--<input class="popup-form__input" type="text" placeholder="Name" formControlName="name">-->
+        <!--<div class="error">-->
+          <!--<span class="help-text" *ngIf="form.controls.name.invalid && form.controls.name.touched">-->
+            <!--<span *ngIf="form.controls.name.errors.required">This field can't be empty.</span>-->
+            <!--<span *ngIf=" form.controls.name.errors.pattern">-->
+              <!--Name should only include latin letters-->
+            <!--</span>-->
+          <!--</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="flex-column">-->
+        <!--<input class="popup-form__input" type="text" placeholder="Name of Publication or Broadcast">-->
+      <!--</div>-->
+      <!--<div class="flex-column">-->
+        <!--<input class="popup-form__input" type="url" placeholder="Website">-->
+      <!--</div>-->
+      <!--<div class="form-row">-->
+        <!--<input class="popup-form__input" type="email" placeholder="Email Address" formControlName="email">-->
+        <!--<div class="error">-->
+          <!--<span class=" help-text" *ngIf="form.controls.email.invalid && form.controls.email.touched">-->
+            <!--<span *ngIf="form.controls.email.errors.required">-->
+              <!--This field can't be empty.-->
+            <!--</span>-->
+            <!--<span *ngIf="!form.controls.email.errors.required && form.controls.email.errors.emailFormat">-->
+              <!--The entered email address is invalid.-->
+            <!--</span>-->
+          <!--</span>-->
+        <!--</div>-->
+        <!--<input class="popup-form__input" type="tel" placeholder="Phone Number">-->
+      <!--</div>-->
+
+      <!--<textarea class="popup-form__textarea" placeholder="Reason for Interview"></textarea>-->
+      <!--<button class="popup-form__btn" type="submit">send</button>-->
+    <!--</form>-->
   </div>
 </div>
+
+

@@ -1,0 +1,82 @@
+.whitepaper {
+  background-image: $bgGradient;
+  padding: 90px 0;
+  @media (max-width: 768px) {
+    padding: 45px 0px;
+    background-image: $bgMobGradient;
+  }
+  .container {
+    @media (max-width: 768px) {
+      padding: 0 25px;
+    }
+    .title {
+      @include styleTitle($mainColor, $hoverColor)
+    }
+    .wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      p {
+        @include styleText($white);
+        padding-top: 25px;
+        max-width: 575px;
+        width: 100%;
+        text-align: left;
+        @media (max-width: 768px) {
+          max-width: none;
+          padding-top: 20px;
+          padding-bottom: 30px;
+        }
+      }
+      .btn-container {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          width: 100%;
+        }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+          margin-top: 30px;
+        }
+        button {
+          width: 240px;
+          height: 50px;
+          border: 2px solid $white;
+          border-radius: 50px;
+          text-transform: uppercase;
+          color: $white;
+          font-size: 18px;
+          background-color: transparent;
+          cursor: pointer;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+          &:hover {
+            background-color: $white;
+            color: $mainColor;
+          }
+          &:first-of-type {
+            margin-right: 20px;
+            color: $hoverColor;
+            border: 2px solid $hoverColor;
+            @media (max-width: 768px) {
+              margin-right: 0;
+              margin-bottom: 20px;
+            }
+            &:hover {
+              background-color: $hoverColor;
+              color: $white;
+            }
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

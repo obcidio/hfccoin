@@ -1,0 +1,113 @@
+footer {
+  background-color: $colorTitle;
+  padding: 16px 0;
+  span {
+    @include styleText(#8B95AF);
+  }
+  .social {
+    display: flex;
+    .mego,
+    .unknown {
+      svg {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        &:hover {
+          background-color: #00adee;
+          .cls-1 {
+            stroke: #00adee;
+          }
+          .cls-2 {
+            fill: #083153;
+          }
+        }
+        .cls-1, .cls-4 {
+          fill: none;
+        }
+        .cls-1 {
+          stroke: rgba(70, 87, 121, 1);
+        }
+        .cls-2 {
+          fill: #8B95AF;
+        }
+        .cls-3 {
+          stroke: none;
+        }
+      }
+    }
+    .telegram,
+    .bitkoin,
+    .fb,
+    .in {
+      svg {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        &:hover {
+          background-color: #00adee;
+          .cls-1 {
+            fill: #083153;
+          }
+          .cls-2 {
+            stroke: #00adee;
+          }
+        }
+        .cls-1 {
+          fill: #8B95AF;
+        }
+        .cls-2, .cls-4 {
+          fill: none;
+        }
+        .cls-2 {
+          stroke: rgba(70, 87, 121, 1);
+        }
+        .cls-3 {
+          stroke: none;
+        }
+      }
+    }
+    .in {
+      svg {
+        margin-right: 0;
+      }
+    }
+  }
+  .privat {
+    color: #8B95AF;
+    font-size: 16px;
+    a {
+      @include styleText(#8B95AF);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .mob-footer {
+    display: none;
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .privat {
+        padding: 20px 0;
+      }
+    }
+  }
+}

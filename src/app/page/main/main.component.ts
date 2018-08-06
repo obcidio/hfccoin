@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern('^[A-Za-z]{1,}[A-Za-z ]*$')]],
       email: ['', [Validators.required, emailValidator(/\S+@\S+\.\S+/)]],
@@ -33,6 +34,15 @@ export class MainComponent implements OnInit {
       this.isFixed = true;
     } else if (scrollTop == 0) {
       this.isFixed = false;
+    }
+
+    const nav = document.getElementById('nav-inner');
+    if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+      nav.classList.add('nav-colored');
+      nav.classList.remove('nav-transparent');
+    } else {
+      nav.classList.add('nav-transparent');
+      nav.classList.remove('nav-colored');
     }
   }
 

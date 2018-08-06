@@ -13,7 +13,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
-  slidesPerView: 'auto'
+  slidesPerView: 'auto',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 };
 
 export function createTranslateLoader(http: HttpClient) {
