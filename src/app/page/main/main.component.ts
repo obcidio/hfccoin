@@ -10,6 +10,7 @@ import {emailValidator} from '../../shared/form-validator';
 export class MainComponent implements OnInit {
   isShowNav: boolean;
   isFixed: boolean = false;
+  isShowFirst: boolean = false;
   isShow: boolean = false;
   form: FormGroup;
 
@@ -46,11 +47,15 @@ export class MainComponent implements OnInit {
     }
   }
 
+  showModalFirst(): void {
+    this.isShowFirst = true;
+  }
   showModal(): void {
     this.isShow = true;
   }
 
   closeModal(): void {
+    this.isShowFirst = false;
     this.isShow = false;
   }
 

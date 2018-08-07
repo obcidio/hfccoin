@@ -105,6 +105,10 @@
               color: $white;
               font-size: 30px;
               cursor: pointer;
+              transition: all .25s;
+              &:hover {
+                color: #00ADEE;
+              }
             }
           }
         }

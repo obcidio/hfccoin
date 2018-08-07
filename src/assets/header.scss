@@ -89,6 +89,19 @@ header {
         //height: 100vh;
         &.show-nav {
           top: 0;
+          .empty {
+            display: none;
+            transition: all .5s;
+            @media (max-width: 768px) {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: calc(100% - 448px);
+              display: block;
+              background-color: rgba(70, 86, 121, .5);
+            }
+          }
         }
       }
       .mob-logo {
@@ -110,6 +123,8 @@ header {
           align-items: center;
           //margin-top: 40px;
           background-color: $colorTitle;
+          height: calc(100vh - 37px);
+          justify-content: start;
         }
         li {
           list-style: none;
@@ -143,14 +158,6 @@ header {
               color: $hoverColor !important;
             }
           }
-        }
-      }
-      .empty {
-        display: none;
-        @media (max-width: 768px) {
-          display: block;
-          height: calc(100% - 472px);
-          background-color: #465679;
         }
       }
     }
