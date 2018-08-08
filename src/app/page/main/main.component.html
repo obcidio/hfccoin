@@ -4,22 +4,25 @@
       <span></span>
       <span></span>
     </div>
-    <nav id="nav-inner" [ngClass]="{'show-nav':isShowNav}">
-      <img class="mob-logo" src="../../../assets/images/logo.png" alt="Logo">
-      <a  href="#top">
-        <img class="desctop-logo" src="../../../assets/images/logo2.png" alt="Logo">
-      </a>
-      <ul>
-        <li (click)="closeMobNav()"><a scrollTo href="#benefits">{{"MAIN_HEADER__NAV_LIST_1" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#moreInfo">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#statistic">{{"MAIN_HEADER__NAV_LIST_3" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#whitepaper">{{"MAIN_HEADER__NAV_LIST_4" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#roadmap">{{"MAIN_HEADER__NAV_LIST_5" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#team">{{"MAIN_HEADER__NAV_LIST_6" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#press">{{"MAIN_HEADER__NAV_LIST_7" | translate}}</a></li>
-        <li (click)="closeMobNav()"><a scrollTo href="#signUp">{{"MAIN_HEADER__NAV_LIST_8" | translate}}</a></li>
-      </ul>
-    </nav>
+    <div id="nav">
+      <nav id="nav-inner" [ngClass]="{'show-nav':isShowNav}">
+        <img class="mob-logo" src="../../../assets/images/logo.png" alt="Logo">
+        <a  href="#top">
+          <img class="desctop-logo" src="../../../assets/images/logo2.png" alt="Logo">
+        </a>
+        <ul>
+          <li (click)="closeMobNav()"><a scrollTo href="#benefits">{{"MAIN_HEADER__NAV_LIST_1" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#moreInfo">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#statistic">{{"MAIN_HEADER__NAV_LIST_3" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#whitepaper">{{"MAIN_HEADER__NAV_LIST_4" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#roadmap">{{"MAIN_HEADER__NAV_LIST_5" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#team">{{"MAIN_HEADER__NAV_LIST_6" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#press">{{"MAIN_HEADER__NAV_LIST_7" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#signUp">{{"MAIN_HEADER__NAV_LIST_8" | translate}}</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <div class="content">
       <div class="logo left">
         <img src="../../../assets/images/logo.png" alt="Logo">
@@ -228,7 +231,7 @@
     <p>{{"MAIN_BENEFITS__DESCRIPTION" | translate}}</p>
     <div class="row">
       <div class="col-33">
-        <img src="../../../assets/svg/1.svg" alt="">
+        <img src="../../../assets/svg/home.svg" alt="">
         <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_1" | translate}}</h6>
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_1" | translate}}</p>
       </div>
@@ -243,7 +246,7 @@
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_3" | translate}}</p>
       </div>
       <div class="col-33">
-        <img src="../../../assets/svg/bar-chart.svg">
+        <img src="../../../assets/svg/headphones.svg">
         <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_4" | translate}}</h6>
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_4" | translate}}</p>
       </div>
@@ -253,7 +256,7 @@
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_5" | translate}}</p>
       </div>
       <div class="col-33">
-        <img src="../../../assets/svg/warning.svg">
+        <img src="../../../assets/svg/gearwheel.svg">
         <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_6" | translate}}</h6>
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_6" | translate}}</p>
       </div>
@@ -354,8 +357,8 @@
         </ul>
       </div>
       <div class="wrapper-right">
-        <img src="../../../assets/svg/Group_2077.svg" alt="">
-        <img class="mobile-chart" src="../../../assets/svg/Group_2169.svg" alt="">
+        <img src="../../../assets/svg/big-chart.svg" alt="">
+        <img class="mobile-chart" src="../../../assets/svg/min-chart.svg" alt="">
       </div>
     </div>
   </div>
@@ -414,44 +417,57 @@
           </div>
           <div class="swiper-slide">
             <div class="slide-top">
-              <div class="slide-top-item done-top">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_1_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_TOP_1_DESCRIPTION"| translate}}</p>
+              <div class="slide-top-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_4_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_4_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
               <div class="slide-top-item">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_2_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_TOP_2_DESCRIPTION"| translate}}</p>
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_5_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_5_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
               <div class="slide-top-item">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_3_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_TOP_3_DESCRIPTION"| translate}}</p>
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_6_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_6_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
             </div>
             <div class="line"></div>
             <div class="slide-bottom">
-              <div class="slide-bottom-item done-bottom">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_1_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_1_DESCRIPTION"| translate}}</p>
+              <div class="slide-bottom-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_3_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_3_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
               <div class="slide-bottom-item">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_2_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_2_DESCRIPTION"| translate}}</p>
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_4_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_4_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-top">
+              <div class="slide-top-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_7_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_TOP_7_DESCRIPTION"| translate}}</p>
+                <div class="triangle"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="slide-bottom">
+              <div class="slide-bottom-item">
+                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_5_TITLE"| translate}}</div>
+                <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_5_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="s-btn swiper-btn-prev">
-        <i class="fas fa-chevron-left"></i>
-      </div>
-      <div class="s-btn swiper-btn-next">
-        <i class="fas fa-chevron-right"></i>
-      </div>
+      <div class="s-btn swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+      <div class="s-btn swiper-button-next"><i class="fas fa-chevron-right"></i></div>
     </div>
   </div>
 </section>
@@ -468,17 +484,13 @@
         <h6 class="name">Bryan Stone</h6>
         <p class="position">CEO, HFC Coin</p>
         <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+          <p>Bryan Stone is an experienced entrepreneur with more than 17 years of experience in the financial services and mortgage industry. After maintaining a successful mortgage branch through the mortgage crisis of 2008, Bryan founded his own mortgage brokerage, Stone Home Loans, in 2012. </p>
+          <!--<a href="#" target="_blank">-->
+            <!--<i class="fab fa-linkedin-in"></i>-->
+          <!--</a>-->
         </div>
         <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <p>Bryan Stone is an experienced entrepreneur with more than 17 years of experience in the financial services and mortgage industry. After maintaining a successful mortgage branch through the mortgage crisis of 2008, Bryan founded his own mortgage brokerage, Stone Home Loans, in 2012. </p>
         </div>
       </div>
       <div class="col-25">
@@ -489,143 +501,30 @@
         <h6 class="name">James Lopez</h6>
         <p class="position">CEO, HFC Coin</p>
         <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+          <p>James Lopez is a multidisciplinary software developer, technology enthusiast and entrepreneur. James has over 15 years of experience in full stack development, software project management and database architecture. </p>
+          <!--<a href="#" target="_blank">-->
+            <!--<i class="fab fa-linkedin-in"></i>-->
+          <!--</a>-->
         </div>
         <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <p>James Lopez is a multidisciplinary software developer, technology enthusiast and entrepreneur. James has over 15 years of experience in full stack development, software project management and database architecture. </p>
         </div>
       </div>
       <div class="col-25">
         <div class="user">
           <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
+          <img src="../../../assets/images/ott-headshot.png" alt="">
         </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
+        <h6 class="name">Ott Sathngam</h6>
+        <p class="position">Senior Software Architect / Engineer</p>
         <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
+          <p>Ott has worked as an electrical and software engineer for more than three decades. His extensive work product spans multiple industries and disciplines. He has been lead engineer on multiple defense contracts and has also worked as software architect / engineer on several private sector projects. </p>
+          <a href="https://www.linkedin.com/in/ott-sathngam-41538650/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
         <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <p>Ott has worked as an electrical and software engineer for more than three decades. His extensive work product spans multiple industries and disciplines. He has been lead engineer on multiple defense contracts and has also worked as software architect / engineer on several private sector projects. </p>
         </div>
       </div>
     </div>
@@ -634,85 +533,35 @@
       <div class="col-25">
         <div class="user">
           <div class="bg"></div>
-          <img src="../../../assets/images/3.png" alt="">
+          <img src="../../../assets/images/david-drake.png" alt="">
         </div>
-        <h6 class="name">Bryan Stone</h6>
-        <p class="position">CEO, HFC Coin</p>
+        <h6 class="name">David Drake</h6>
+        <p class="position">Founder, LDJ Capital</p>
         <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+          <p>David Drake is Founder and Chairman at LDJ Capital, a multi-family office which deals in worldwide funds accessing over trillions in assets and maintains over 50+ global directors and family office partners.  LDJ Capital has holdings in Victoria Partners, a 500 family office network based in London; LDJ Real Estate Group; and The Soho Loft Media Group.</p>
+          <!--<a href="#" target="_blank">-->
+            <!--<i class="fab fa-linkedin-in"></i>-->
+          <!--</a>-->
         </div>
         <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <p>David Drake is Founder and Chairman at LDJ Capital, a multi-family office which deals in worldwide funds accessing over trillions in assets and maintains over 50+ global directors and family office partners.  LDJ Capital has holdings in Victoria Partners, a 500 family office network based in London; LDJ Real Estate Group; and The Soho Loft Media Group.</p>
         </div>
       </div>
       <div class="col-25">
         <div class="user">
           <div class="bg"></div>
-          <img src="../../../assets/images/2.png" alt="">
+          <img src="../../../assets/images/alan.png" alt="">
         </div>
-        <h6 class="name">James Lopez</h6>
-        <p class="position">CEO, HFC Coin</p>
+        <h6 class="name">Alan Johnson</h6>
+        <p class="position">Founder, LoanXEngine</p>
         <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
+          <p>Alan Johnson has spent his career at the forefront of loan origination technology and software. Alan is an expert in loan origination automation and has created software that combines the essential services of lead management, product pricing and eligibility, and customer relationship management workflow into a single, easy to use platform.  </p>
+          <a href="https://www.linkedin.com/in/alan-johnson-7baa7a3/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
         <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-        </div>
-      </div>
-      <div class="col-25">
-        <div class="user">
-          <div class="bg"></div>
-          <img src="../../../assets/images/1.png" alt="">
-        </div>
-        <h6 class="name">Stanislav Sheliakin</h6>
-        <p class="position">Head of Blockchain Strategy & Design</p>
-        <div class="story">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-        <div class="story-mobile">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores doloremque eos eveniet laudantium
-            maiores
-            necessitatibus nesciunt officia sit tempore. Laborum!</p>
+          <p>Alan Johnson has spent his career at the forefront of loan origination technology and software. Alan is an expert in loan origination automation and has created software that combines the essential services of lead management, product pricing and eligibility, and customer relationship management workflow into a single, easy to use platform.  </p>
         </div>
       </div>
     </div>
@@ -725,15 +574,19 @@
     <div class="row">
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
       </div>
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, facilis.</p>
       </div>
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
@@ -749,7 +602,7 @@
       </div>
     </div>
     <div class="btn">
-      <button type="button">DOWNLOAD PRESS PACKET</button>
+      <!--<button type="button">DOWNLOAD PRESS PACKET</button>-->
       <a (click)="showModal()">Request an Interview</a>
     </div>
   </div>

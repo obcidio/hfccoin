@@ -1,13 +1,10 @@
 header {
   background-image: $bgGradient;
+  padding-top: 160px;
   @media (max-width: 768px) {
     background-image: $bgMobGradient;
   }
   .container {
-    padding: 103px 0 20px;
-    @media (max-width: 768px) {
-      padding: 20px 25px 40px;
-    }
     .mob-btn {
       display: none;
       @media (max-width: 768px) {
@@ -15,10 +12,11 @@ header {
         position: absolute;
         top: 17px;
         right: 25px;
-        z-index: 6;
+        z-index: 80;
         cursor: pointer;
         &.fixed-btn {
-          position: fixed;
+          position: fixed !important;
+          z-index: 80;
           span {
             background-color: $hoverColor !important;
           }
@@ -57,18 +55,14 @@ header {
       }
     }
     nav {
-      position: fixed;
-      z-index: 70;
-      top: 0;
-      left: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1150px;
       width: 100%;
-      height: 83px;
-      //padding-right: 140px;
+      height: 60px;
       padding: 0 20px;
-      transition: all .25s;
+      margin: auto;
       @media (max-width: 1199px) {
         padding-right: 0;
       }
@@ -117,7 +111,7 @@ header {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        padding: 30px 20px;
+        //padding: 30px 20px;
         @media (max-width: 768px) {
           flex-direction: column;
           align-items: center;
@@ -125,6 +119,7 @@ header {
           background-color: $colorTitle;
           height: calc(100vh - 37px);
           justify-content: start;
+          padding-top: 40px;
         }
         li {
           list-style: none;
@@ -161,16 +156,26 @@ header {
         }
       }
     }
-
+    .social {
+      margin-bottom: 40px;
+    }
   }
+}
+
+#nav {
+  position: fixed;
+  z-index: 70;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all .25s;
+  padding: 0 15px;
 }
 
 .content {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 90px 15px 0;
-
   .logo {
     img {
       width: 330px;
@@ -270,7 +275,6 @@ header {
       }
     }
   }
-
   .right {
     margin-bottom: -95px;
     img {
@@ -363,6 +367,8 @@ header {
   display: none;
 }
 
+
+
 @media (max-width: 992px) and (min-width: 768px){
   header {
     .container {
@@ -370,6 +376,7 @@ header {
         flex-direction: column;
         justify-content: initial;
         padding-left: 0;
+        height: 93px;
         & > a {
           padding: 20px 0 0;
         }
@@ -399,11 +406,17 @@ header {
 
 @media (max-width: 767px) {
 
+  header {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    .container {
+      padding: 0;
+    }
+  }
+
   .content {
     flex-direction: column;
     align-items: center;
-    padding-top: 30px;
-
     .right {
       display: flex;
       flex-direction: column;

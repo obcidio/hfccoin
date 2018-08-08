@@ -88,12 +88,13 @@
           justify-content: space-between;
           background-image: $itemGradient;
           border-radius: 10px;
-          padding: 20px;
+          padding: 10px;
           @media (max-width: 768px) {
             display: none;
           }
           p {
             @include styleText($white);
+            font-size: 13px;
             line-height: 24px;
           }
           a {
