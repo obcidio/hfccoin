@@ -1,13 +1,19 @@
 <header id="top">
   <div class="container">
-    <div class="mob-btn" [ngClass]="{'color':!isShowNav,'fixed-btn':isFixed}" (click)="showNavFunc()">
-      <span></span>
-      <span></span>
-    </div>
+
     <div id="nav">
+      <div class="mobile-navbar">
+        <a scrollTo href="#top" class="mobile-navbar__link">
+          <img scrollTo href="#top" class="mob-logo mobile-navbar__img" src="../../../assets/images/logo.png" alt="Logo">
+        </a>
+        <div class="mob-btn mobile-navbar__btn" [ngClass]="{'color':!isShowNav}" (click)="showNavFunc()">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <nav id="nav-inner" [ngClass]="{'show-nav':isShowNav}">
-        <img class="mob-logo" src="../../../assets/images/logo.png" alt="Logo">
-        <a  href="#top">
+
+        <a  scrollTo href="#top">
           <img class="desctop-logo" src="../../../assets/images/logo2.png" alt="Logo">
         </a>
         <ul>
@@ -22,7 +28,6 @@
         </ul>
       </nav>
     </div>
-
     <div class="content">
       <div class="logo left">
         <img src="../../../assets/images/logo.png" alt="Logo">
@@ -383,7 +388,7 @@
     <div class="time-line">
       <div class="swiper-container" [swiper]="config" [(index)]="index">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide_first">
             <div class="slide-top">
               <div class="slide-top-item done-top">
                 <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_1_TITLE"| translate}}</div>
@@ -528,7 +533,7 @@
         </div>
       </div>
     </div>
-    <h2 class="title">Advisors</h2>
+    <h2 class="title title_mob">Advisors</h2>
     <div class="row remove-margin">
       <div class="col-25">
         <div class="user">
@@ -562,6 +567,23 @@
         </div>
         <div class="story-mobile">
           <p>Alan Johnson has spent his career at the forefront of loan origination technology and software. Alan is an expert in loan origination automation and has created software that combines the essential services of lead management, product pricing and eligibility, and customer relationship management workflow into a single, easy to use platform.  </p>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="user">
+          <div class="bg"></div>
+          <img src="../../../assets/images/grant.png" alt="">
+        </div>
+        <h6 class="name">Grant Gulovson</h6>
+        <p class="position">Attorney, Blockchain Consultant</p>
+        <div class="story">
+          <p>Grant is a licensed U.S.-based intellectual property attorney with over 15 years' experience in a wide variety of different practice areas. He started investing in Bitcoin in 2013, and is the legal advisor to several blockchain startups. Grant only works with projects that he believes in and that are sophisticated enough to recognize how important it is to have legal counsel that understands the law, the technology and the marketplace.</p>
+          <a href="https://www.linkedin.com/in/gulovsen/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="story-mobile">
+          <p>Grant is a licensed U.S.-based intellectual property attorney with over 15 years' experience in a wide variety of different practice areas. He started investing in Bitcoin in 2013, and is the legal advisor to several blockchain startups. Grant only works with projects that he believes in and that are sophisticated enough to recognize how important it is to have legal counsel that understands the law, the technology and the marketplace.</p>
         </div>
       </div>
     </div>

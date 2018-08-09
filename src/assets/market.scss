@@ -54,6 +54,10 @@
           @media (max-width: 1024px) {
             padding-bottom: 30px;
           }
+          @media (max-width: 767px) {
+            padding-left: 0;
+            padding-right: 0;
+          }
           h6 {
             color: $white;
             font-size: 20px;
@@ -64,7 +68,7 @@
               &:before {
                 content: '';
                 position: absolute;
-                top: 50%;
+                top: 14px;
                 left: -3px;
                 transform: translateY(-50%);
                 width: 20px;

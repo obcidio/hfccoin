@@ -29,6 +29,7 @@ header {
           background-color: #fff;
           margin-top: 3px;
           &:first-of-type {
+            margin-top: 0;
             transform: rotate(45deg);
             transform-origin: 50% -179%;
           }
@@ -117,7 +118,7 @@ header {
           align-items: center;
           //margin-top: 40px;
           background-color: $colorTitle;
-          height: calc(100vh - 37px);
+          height: 100vh;
           justify-content: start;
           padding-top: 40px;
         }
@@ -287,6 +288,9 @@ header {
         display: flex;
         justify-content: space-around;
         width: 100%;
+        & > div {
+          margin: auto;
+        }
       }
       .mego,
       .unknown {
@@ -367,6 +371,28 @@ header {
   display: none;
 }
 
+.mobile-navbar {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  &__link {
+    display: block;
+    width: 100px;
+    height: 20px;
+  }
+  &__img {
+    width: inherit;
+  }
+  &__btn {
+    position: initial !important;
+    height: initial !important;
+  }
+}
+
 
 
 @media (max-width: 992px) and (min-width: 768px){
@@ -390,6 +416,10 @@ header {
 }
 
 @media (min-width: 767px) {
+  .mobile-navbar {
+    display: none;
+  }
+
   .nav-colored {
     background-color: #fff;
     height: 63px;
@@ -407,11 +437,16 @@ header {
 @media (max-width: 767px) {
 
   header {
-    padding-top: 50px;
+    padding-top: 90px;
     padding-bottom: 25px;
     .container {
-      padding: 0;
+      padding: 0 15px;
     }
+  }
+
+  #nav {
+    height: 45px;
+    background: #011843;
   }
 
   .content {
@@ -424,7 +459,7 @@ header {
       margin-bottom: initial;
 
       img {
-        width: 100%;
+        width: calc(100% - 30px);
       }
     }
   }
