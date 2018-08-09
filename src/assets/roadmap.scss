@@ -129,8 +129,7 @@
               }
             }
             .line {
-              //width: calc(100% - 130px);
-              width: 100%;
+              width: calc(100% + 50px);
               height: 2px;
               background-color: #CDD5E7;
               display: block;
@@ -317,6 +316,7 @@
 
 
 .swiper-slide {
+  padding-right: 25px;
   &_first {
     &:after {
       position: absolute;
@@ -333,6 +333,7 @@
 
 @media (max-width: 992px) {
   .swiper-slide {
+    padding-right: initial;
     &_first {
       &:after {
         display: none;
