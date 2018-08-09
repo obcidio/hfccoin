@@ -288,8 +288,8 @@ header {
         display: flex;
         justify-content: space-around;
         width: 100%;
-        & > div {
-          margin: auto;
+        &  svg {
+          margin: 0 5px !important;
         }
       }
       .mego,
@@ -379,6 +379,7 @@ header {
   align-items: center;
   height: 100%;
   padding: 0 10px;
+  background-color: #011843;
   &__link {
     display: block;
     width: 100px;
@@ -459,9 +460,16 @@ header {
       margin-bottom: initial;
 
       img {
-        width: calc(100% - 30px);
+        width: calc(100%);
       }
     }
   }
 
+}
+
+@media (max-width: 560px) {
+  .content {
+    align-items: initial;
+    padding: 0 10px;
+  }
 }
