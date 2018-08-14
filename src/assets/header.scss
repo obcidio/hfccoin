@@ -199,12 +199,14 @@ header {
     }
     .social {
       display: flex;
-      margin-top: 85px;
+      margin-top: 65px;
       @media (max-width: 768px) {
         display: none;
       }
       .mego,
-      .unknown {
+      .unknown,
+      .insta,
+      .tw {
         svg {
           display: block;
           width: 40px;
@@ -293,7 +295,9 @@ header {
         }
       }
       .mego,
-      .unknown {
+      .unknown,
+      .insta,
+      .tw {
         svg {
           display: block;
           width: 40px;
