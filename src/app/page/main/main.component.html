@@ -1,6 +1,5 @@
 <header id="top">
   <div class="container">
-
     <div id="nav">
       <div class="mobile-navbar">
         <a scrollTo href="#top" class="mobile-navbar__link">
@@ -12,13 +11,12 @@
         </div>
       </div>
       <nav id="nav-inner" [ngClass]="{'show-nav':isShowNav}">
-
         <a  scrollTo href="#top">
           <img class="desctop-logo" src="../../../assets/images/logo2.png" alt="Logo">
         </a>
         <ul>
           <li (click)="closeMobNav()"><a scrollTo href="#benefits">{{"MAIN_HEADER__NAV_LIST_1" | translate}}</a></li>
-          <li (click)="closeMobNav()"><a scrollTo href="#moreInfo">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
+          <li (click)="closeMobNav()"><a scrollTo href="#mortgage-problems">{{"MAIN_HEADER__NAV_LIST_2" | translate}}</a></li>
           <li (click)="closeMobNav()"><a scrollTo href="#statistic">{{"MAIN_HEADER__NAV_LIST_3" | translate}}</a></li>
           <li (click)="closeMobNav()"><a scrollTo href="#whitepaper">{{"MAIN_HEADER__NAV_LIST_4" | translate}}</a></li>
           <li (click)="closeMobNav()"><a scrollTo href="#roadmap">{{"MAIN_HEADER__NAV_LIST_5" | translate}}</a></li>
@@ -33,7 +31,7 @@
         <img src="../../../assets/images/logo.png" alt="Logo">
         <div class="slogan">
           <p> {{"MAIN_HEADER__CONTENT_LOGO_SLOGAN" | translate}}</p>
-          <button class="btn btn_secondary">sign up</button>
+          <a scrollTo href="#signUp" class="btn btn_secondary">sign up</a>
         </div>
         <div class="social">
           <div class="mego">
@@ -249,19 +247,9 @@
     <p>{{"MAIN_BENEFITS__DESCRIPTION" | translate}}</p>
     <div class="row">
       <div class="col-33">
-        <img src="../../../assets/svg/home.svg" alt="">
-        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_1" | translate}}</h6>
-        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_1" | translate}}</p>
-      </div>
-      <div class="col-33">
         <img src="../../../assets/svg/wall-clock.svg" alt="">
         <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_2" | translate}}</h6>
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_2" | translate}}</p>
-      </div>
-      <div class="col-33">
-        <img src="../../../assets/svg/padlock.svg">
-        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_3" | translate}}</h6>
-        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_3" | translate}}</p>
       </div>
       <div class="col-33">
         <img src="../../../assets/svg/headphones.svg">
@@ -269,20 +257,30 @@
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_4" | translate}}</p>
       </div>
       <div class="col-33">
+        <img src="../../../assets/svg/gearwheel.svg">
+        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_6" | translate}}</h6>
+        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_6" | translate}}</p>
+      </div>
+      <div class="col-33">
         <img src="../../../assets/svg/money.svg">
         <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_5" | translate}}</h6>
         <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_5" | translate}}</p>
       </div>
       <div class="col-33">
-        <img src="../../../assets/svg/gearwheel.svg">
-        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_6" | translate}}</h6>
-        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_6" | translate}}</p>
+        <img src="../../../assets/svg/home.svg" alt="">
+        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_1" | translate}}</h6>
+        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_1" | translate}}</p>
+      </div>
+      <div class="col-33">
+        <img src="../../../assets/svg/padlock.svg">
+        <h6>{{"MAIN_BENEFITS__ROW_COL_33_H6_3" | translate}}</h6>
+        <p>{{"MAIN_BENEFITS__ROW_COL_33_DESCRIPTION_3" | translate}}</p>
       </div>
     </div>
   </div>
 </section>
 <!--market-->
-<section class="market" style="background-image: url('../../../assets/images/bg.png')">
+<section id="mortgage-problems" class="market" style="background-image: url('../../../assets/images/bg.png')">
   <div class="container">
     <div class="market-left">
       <h2 class="title">{{"MAIN_MARKET__TITLE_LEFT" | translate}}</h2>
@@ -389,7 +387,7 @@
       <p>{{"MAIN_WHITEPAPER__WRAPPER_DESCRIPTION"| translate}}</p>
       <div class="btn-container">
         <button type="button">{{"MAIN_WHITEPAPER__BTN_1"| translate}}</button>
-        <button type="button">{{"MAIN_WHITEPAPER__BTN_2"| translate}}</button>
+        <!--<button type="button">{{"MAIN_WHITEPAPER__BTN_2"| translate}}</button>-->
       </div>
     </div>
   </div>
@@ -468,19 +466,12 @@
           <div class="swiper-slide">
             <div class="slide-top">
               <div class="slide-top-item">
-                <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_TOP_7_TITLE"| translate}}</div>
-                <p>{{"MAIN_ROADMAP__SLIDE_TOP_7_DESCRIPTION"| translate}}</p>
-                <div class="triangle"></div>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="slide-bottom">
-              <div class="slide-bottom-item">
                 <div class="title-slide">{{"MAIN_ROADMAP__SLIDE_BOTTOM_5_TITLE"| translate}}</div>
                 <p>{{"MAIN_ROADMAP__SLIDE_BOTTOM_5_DESCRIPTION"| translate}}</p>
                 <div class="triangle"></div>
               </div>
             </div>
+            <div class="line"></div>
           </div>
         </div>
       </div>
@@ -661,30 +652,6 @@
       <div class="col-25">
         <img src="../../../assets/svg/Group_1926.svg" alt="">
         <p>Lorem ipsum dolor sit amet, consectetur.</p>
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, facilis.</p>
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
-      </div>
-      <div class="col-25">
-        <img src="../../../assets/svg/Group_1926.svg" alt="">
       </div>
     </div>
     <div class="btn">

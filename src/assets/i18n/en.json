@@ -1,7 +1,7 @@
 {
   "MAIN_HEADER__NAV_LIST_1": "Benefits",
-  "MAIN_HEADER__NAV_LIST_2": "We help",
-  "MAIN_HEADER__NAV_LIST_3": "Market Statistic",
+  "MAIN_HEADER__NAV_LIST_2": "Mortgage Problems",
+  "MAIN_HEADER__NAV_LIST_3": "Market Analysis",
   "MAIN_HEADER__NAV_LIST_4": "Whitepaper",
   "MAIN_HEADER__NAV_LIST_5": "Roadmap",
   "MAIN_HEADER__NAV_LIST_6": "Team",
@@ -50,7 +50,7 @@
   "MAIN_CRISIS__ROW_COL_33_DESCRIPTION_5": "From 2003 to 2006, private mortgage securitization increased from 10% to 40%. The newer, more risky loans were more profitable and less regulated leading to an explosion in their popularity.",
   "MAIN_CRISIS__ROW_COL_33_H6_6": "Vulnerable Public",
   "MAIN_CRISIS__ROW_COL_33_DESCRIPTION_6": "'Innovative' mortgage products such as 2/28 adjustable rate mortgages and interest only mortgages defaulted in dramatically higher numbers than traditional 15 and 30 year fixed mortgages.",
-  "MAIN_STATISTIC__TITLE": "Mortgage Market Statistics",
+  "MAIN_STATISTIC__TITLE": "Mortgage Market Analysis",
   "MAIN_STATISTIC__SUBTITLE": "Global housing markets have been steadily climbing up. The Global House Price Index indicates the change of home values in percentage over time. From Q1 200 to Q3 2017, home prices increased 160%. The dip represents the 2008 Mortgage Crisis.",
   "MAIN_STATISTIC__WRAPPER_LEFT_H4_1": "$2.065 trillion",
   "MAIN_STATISTIC__WRAPPER_LEFT_DESCRIPTION_1": "Value of mortgages originated in 2016 in the US",
@@ -62,33 +62,41 @@
   "MAIN_WHITEPAPER__WRAPPER_DESCRIPTION": "Find out how HFC coin will take home mortgages to the next level by giving people freedom powered by the blockchain, decentralized architectures, and community-based economies.",
   "MAIN_WHITEPAPER__BTN_1": "WHITEPAPER",
   "MAIN_WHITEPAPER__BTN_2": "PROJECT BRIEF",
+
   "MAIN_ROADMAP__TITLE": "Roadmap",
-  "MAIN_ROADMAP__SLIDE_TOP_1_TITLE": "August 15",
-  "MAIN_ROADMAP__SLIDE_TOP_1_DESCRIPTION": "Launch website, private sale, all marketing",
-  "MAIN_ROADMAP__SLIDE_TOP_2_TITLE": "October 15",
-  "MAIN_ROADMAP__SLIDE_TOP_2_DESCRIPTION": "Launch token sale, list HFC Coin on exchanges (need to check these time frames with white paper)",
-  "MAIN_ROADMAP__SLIDE_TOP_3_TITLE": "November",
-  "MAIN_ROADMAP__SLIDE_TOP_3_DESCRIPTION": "Begin development of mortgage platform",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_1_TITLE": "September 15",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_1_DESCRIPTION": "Launch Presale",
+
+  "MAIN_ROADMAP__SLIDE_TOP_1_TITLE": "August 20",
+  "MAIN_ROADMAP__SLIDE_TOP_1_DESCRIPTION": "Publish white paper and launch website ",
+
+  "MAIN_ROADMAP__SLIDE_BOTTOM_1_TITLE": "October",
+  "MAIN_ROADMAP__SLIDE_BOTTOM_1_DESCRIPTION": "Launch token pre-sale",
+
+  "MAIN_ROADMAP__SLIDE_TOP_2_TITLE": "November",
+  "MAIN_ROADMAP__SLIDE_TOP_2_DESCRIPTION": "Launch token public sale, list HFC Coin on exchanges",
+
   "MAIN_ROADMAP__SLIDE_BOTTOM_2_TITLE": "November",
   "MAIN_ROADMAP__SLIDE_BOTTOM_2_DESCRIPTION": "Start mortgage lending operations",
 
-  "MAIN_ROADMAP__SLIDE_TOP_4_TITLE": "February 2019",
-  "MAIN_ROADMAP__SLIDE_TOP_4_DESCRIPTION": "Invite token-holders to preview MBS beta of platform",
-  "MAIN_ROADMAP__SLIDE_TOP_5_TITLE": "March 2019",
-  "MAIN_ROADMAP__SLIDE_TOP_5_DESCRIPTION": "Launch first MBS with rewards and allow token-holders to stake using HFC Coin",
-  "MAIN_ROADMAP__SLIDE_TOP_6_TITLE": "May 2019",
-  "MAIN_ROADMAP__SLIDE_TOP_6_DESCRIPTION": "Launch mortgage-lending platform for customers",
+  "MAIN_ROADMAP__SLIDE_TOP_3_TITLE": "November",
+  "MAIN_ROADMAP__SLIDE_TOP_3_DESCRIPTION": "Begin development of mortgage platform",
+
   "MAIN_ROADMAP__SLIDE_BOTTOM_3_TITLE": "December",
   "MAIN_ROADMAP__SLIDE_BOTTOM_3_DESCRIPTION": "Complete public token sale",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_4_TITLE": "February 2019",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_4_DESCRIPTION": "Begin alpha test of mortgage-lending platform for customers",
 
-  "MAIN_ROADMAP__SLIDE_TOP_7_TITLE": "October 2019",
-  "MAIN_ROADMAP__SLIDE_TOP_7_DESCRIPTION": "Launch second MBS",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_5_TITLE": "April 2019",
-  "MAIN_ROADMAP__SLIDE_BOTTOM_5_DESCRIPTION": "Begin beta testing of mortgage-lending platform for customers",
+  "MAIN_ROADMAP__SLIDE_TOP_4_TITLE": "December",
+  "MAIN_ROADMAP__SLIDE_TOP_4_DESCRIPTION": "Begin alpha test of mortgage-lending platform for customers",
+
+  "MAIN_ROADMAP__SLIDE_BOTTOM_4_TITLE": "March 2019",
+  "MAIN_ROADMAP__SLIDE_BOTTOM_4_DESCRIPTION": "Begin beta testing of mortgage-lending platform for customers",
+
+  "MAIN_ROADMAP__SLIDE_TOP_5_TITLE": "February 2019",
+  "MAIN_ROADMAP__SLIDE_TOP_5_DESCRIPTION": "Invite token-holders to preview MBS beta of platform",
+
+  "MAIN_ROADMAP__SLIDE_BOTTOM_5_TITLE": "May 2019",
+  "MAIN_ROADMAP__SLIDE_BOTTOM_5_DESCRIPTION": "Launch mortgage-lending platform for customers",
+
+  "MAIN_ROADMAP__SLIDE_TOP_6_TITLE": "March 2019",
+  "MAIN_ROADMAP__SLIDE_TOP_6_DESCRIPTION": "Launch first MBS with rewards and allow token-holders to stake using HFC Coin",
 
   "MAIN_": "",
   "MAIN_": "",

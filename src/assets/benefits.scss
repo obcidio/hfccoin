@@ -64,6 +64,8 @@
         }
         img {
           width: 70px;
+          height: 80px;
+          object-fit: contain;
           @media (max-width: 768px) {
             float: left;
             width: 30px;

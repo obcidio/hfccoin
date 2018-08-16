@@ -70,7 +70,8 @@
                   @include styleText($textColor);
                   font-size: 14px;
                   text-align: center;
-                  line-height: 19px;
+                  line-height: 22px;
+                  margin-top: 3px;
                 }
                 .triangle {
                   width: 0;
@@ -193,6 +194,7 @@
                   font-size: 14px;
                   text-align: center;
                   line-height: 22px;
+                  margin-top: 3px;
                 }
                 .triangle {
                   width: 0;
@@ -332,6 +334,10 @@
 }
 
 @media (max-width: 992px) {
+  .swiper-wrapper {
+    position: static !important;
+    transform: none !important;
+  }
   .swiper-slide {
     padding-right: initial;
     &_first {
