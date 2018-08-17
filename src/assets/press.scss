@@ -96,6 +96,22 @@
   }
 }
 
+.press {
+  svg {
+    fill: transparent;
+    stroke: #fff;
+    width: 120px;
+    height: 80px;
+    .cls-1 {
+      stroke: transparent;
+    }
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
 @media (max-width: 767px) {
   .row {
     margin: 0;

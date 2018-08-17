@@ -76,4 +76,14 @@ a {
   }
 }
 
-
+@media (max-width: 380px) {
+  .social-mobile,
+  .social {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    & > * {
+      width: 40px;
+      margin: 5px !important;
+    }
+  }
+}

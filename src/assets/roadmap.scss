@@ -279,6 +279,13 @@
   }
 }
 
+.slide-h {
+  display: block;
+}
+.slide-s {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .swiper-wrapper {
     flex-direction: column !important;
@@ -286,6 +293,13 @@
 
   .swiper-slide {
     margin-bottom: 20px;
+  }
+
+  .slide-h {
+    display: none;
+  }
+  .slide-s {
+    display: block;
   }
 
 }
