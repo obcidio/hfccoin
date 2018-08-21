@@ -469,9 +469,16 @@ header {
 
 }
 
-@media (max-width: 560px) {
+@media (max-width: 767px) {
   .content {
-    align-items: initial;
+    align-items: center;
+    text-align: center;
     padding: 0 10px;
+    p {
+      margin: 0 auto;
+    }
+    a {
+      margin: 15px auto;
+    }
   }
 }
