@@ -57,14 +57,14 @@ export class MainComponent implements OnInit {
     this.isShow = false;
   }
 
-  closeMobNav(): void {
-    
+  closeMobNav(event): void {
     this.isShowNav = false;
     
     gtag('config', 'UA-117523851-1', {
 	 'page_title': event.target.innerText,
 	 'page_path': event.target.hash
 	});
+    
     
   }
 
