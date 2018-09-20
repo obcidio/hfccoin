@@ -31,7 +31,7 @@
         <img src="../../../assets/images/logo.png" alt="Logo">
         <div class="slogan">
           <p> {{"MAIN_HEADER__CONTENT_LOGO_SLOGAN" | translate}}</p>
-          <a scrollTo href="#signUp" class="btn btn_secondary">sign up</a>
+          <a (click)="showModalFirst()" class="btn btn_secondary">sign up</a>
         </div>
         <div class="social">
           <div class="mego">
@@ -906,7 +906,8 @@
       <span></span>
       <span></span>
     </button>
-    <div class="popup__title">Apply to Whitelist</div>
+    <div class="popup__title">Get Started</div>
+    	<p class="" style="text-align:center; font-weight: normal; font-size: .8rem; color: #666;margin-bottom: .8rem;">Fill out the form below to get started with HFC. Once the form is completed, we will contact you with next steps. Thanks!</p>
     <!-- Begin MailChimp Signup Form -->
       <!--<form ngNoForm action="https://hfccoin.us18.list-manage.com/subscribe/post?u=2c588183070244245b2583004&amp;id=ec8d65cb3f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate popup-form" target="_blank" novalidate>-->
         <!--<div class="mc-field-group flex-column">-->
