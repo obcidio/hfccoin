@@ -1,7 +1,7 @@
 .moreInfo {
-  padding: 100px 0;
+  padding: 100px 0 0;
   @media (max-width: 768px) {
-    padding: 45px 0;
+    padding: 45px 0 0;
   }
   .container {
     @media (max-width: 768px) {
@@ -74,8 +74,9 @@
         font-size: 16px;
         height: 50px;
         border-radius: 60px;
-        border: 2px solid #C5CAD7;
-        color: #011843;
+        border: 2px solid $hoverColor;
+        background-color: $white;
+        color: $textColor;
         padding-left: 15px;
         padding-right: 100px;
         max-width: 356px;
@@ -101,10 +102,10 @@
         height: 50px;
         border-radius: 60px;
         color: $white;
-        background-color: $mainColor;
+        background-color: $hoverColor;
         text-transform: uppercase;
         font-size: 18px;
-        max-width: 240px;
+        max-width: 190px;
         width: 100%;
         cursor: pointer;
         border: 0;
@@ -113,13 +114,21 @@
           max-width: none;
           margin-top: 10px;
         }
-        &:hover {
-          background-color: #0F60A4;
-        }
+        //&:hover {
+        //  background-color: #0F60A4;
+        //}
         &:focus {
           outline: none;
         }
       }
     }
+  }
+}
+
+.moreInfo-top {
+  padding: 0;
+  .container {
+    padding: 0;
+    margin-top: 20px;
   }
 }
